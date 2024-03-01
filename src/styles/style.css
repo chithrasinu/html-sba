@@ -1,0 +1,61 @@
+body {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;;
+    display: block;
+    background-color: lightgrey;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+footer {
+    margin-top: 5px;;
+    text-align: center;
+    font-size: small;
+}
+
+.canvas {
+    width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 500px;
+    padding: 10px;
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.canvas input[type=text], input[type=password], select {
+    width: 98%;
+    min-height: 40px;
+    border-color: lightgrey;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 2x;
+    margin: 2px;
+    font-size: medium;
+}
+
+.canvas input[type=submit] {
+    width: 35%;
+    min-height: 30px;
+    font-size: medium;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(3, 3, 57);
+    color: whitesmoke;
+}
+
+.canvas input[type=submit]:hover {
+    width: 35%;
+    min-height: 30px;
+    font-size: medium;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(7, 7, 149);
+    color: whitesmoke;
+}
+
+.input-field {
+    min-height: 50px;
+    margin: 20px;
+}

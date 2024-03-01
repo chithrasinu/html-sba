@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Per Scholas :: Test Portal - Register</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <script type="text/javascript" src="../scripts/login.js"></script>
+        <style>
+            .register-canvas {
+                border: 1px lightgrey solid;
+                border-radius: 5px;
+                width: 500px;
+                min-height: 200px;
+                margin: auto;
+                display: flexbox;
+            }
+            .register-canvas table {
+                margin-top: 20px;
+                width: 100%;
+            }            
+            .input-field a{
+                margin-top: 5px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="canvas">
+            <div class="logo-container">
+                <img alt="logo" src="https://perscholas.org/wp-content/themes/per-scholas/assets/images/logo1.svg" />
+            </div>
+            <div class="register-canvas">
+                <form onsubmit="return register();">
+                    <div class="input-field">
+                        <label for="first_name">First Name*</label>
+                        <input id="fName" type="text" maxlength="30" name="first_name" placeholder="First Name" width="100%" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="last_name">Last Name*</label>
+                        <input id="lName" type="text" maxlength="30" name="last_name" placeholder="Last Name" width="100%" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Email*</label>
+                        <input type="text" maxlength="120" name="email" placeholder="Email" width="100%" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="gender">Gender*</label>
+                        <select id="gender" name="gender" required>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="O">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="login_name">Login Name*</label>
+                        <input id="loginName" type="text" maxlength="30" name="login_name" placeholder="Login Name" width="100%" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password*</label>
+                        <input id="pwd" type="password" maxlength="30" name="password" placeholder="Password" width="100%" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="confirm_password">Password*</label>
+                        <input type="password" maxlength="30" name="confirm_password" placeholder="Confirm Password" width="100%" required />
+                    </div>
+                    <div class="input-field" style="text-align: right;">                        
+                        <input type="submit">
+                        <a href="login.html">Already a user? Login Here!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <footer>
+        2024 &copy; All Rights Reserved.
+    </footer>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Per Scholas :: Test Portal - Home</title>
+        <link rel="stylesheet" href="../styles/style.css"> 
+        <link type="test/javascript" href="../scripts/login.js">
+        <style>
+        .menu-container {
+            border: 1px lightgrey solid;
+            border-radius: 5px;
+            width: 300px;
+            min-height: 300px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .tabContent {
+            margin-left: 10px;
+            border: 1px lightgrey solid;
+            border-radius: 5px;
+            width: 830px;
+            min-height: 300px;
+            padding: 10px;
+            
+        }
+        .menu-container span{
+            display: block;
+            height: 35px;
+            min-width: 280px;
+            padding-left: 5px;
+            padding-top: 5px;
+            margin: 2px;
+            background-color: lightgrey;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .menu-container a{
+            display: block;
+            height: 35px;
+            min-width: 280px;
+            padding-left: 5px;
+            padding-top: 5px;
+            margin: 2px;
+            background-color: lightgrey;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .menu-container a:hover{
+            display: block;
+            height: 35px;
+            min-width: 280px;
+            padding-left: 5px;
+            padding-top: 5px;
+            margin: 2px;
+            background-color: lightblue;
+            border-radius: 5px;
+        }
+        </style>
+        <script type="text/javascript">
+            function getName(){
+                let message = "Welcome, ";
+                var param = /[&?]name=([^&]+)/.exec(location.search);
+                if (param)
+                    message += decodeURIComponent(param[1]);
+                document.getElementById('spnUser').innerText = message;
+            }
+            function tabChange(tabName){
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabContent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    if(tabcontent[i].id === tabName){
+                    document.getElementById(tabName).style.display = "block";
+                    }
+                    else {
+                    tabcontent[i].style.display = "none";
+                    }
+                }
+                
+                return false;
+            }
+        </script>
+    </head>
+    <body onload="getName();">
+        <div class="canvas">
+            <div class="logo-container">
+                <img alt="logo" src="https://perscholas.org/wp-content/themes/per-scholas/assets/images/logo1.svg" />
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="menu-container">
+                            <a href onclick="return tabChange('home')">Home</a>
+                            <a href onclick="return tabChange('dashboard')">Dashboard</a>
+                            <a href onclick="return tabChange('profile')">Profile</a>
+                            <a href onclick="return tabChange('changepass')">Change Password</a>
+                            <a href="login.html">Logout!</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tabContent" id="home" style="display: block;">
+                            <span id="spnUser"></span>
+                        </div>
+                        <div class="tabContent" id="dashboard" style="display: none;">
+                            Dashboard Here!
+                        </div>
+                        <div class="tabContent" id="profile" style="display: none;">
+                            Profile Here!
+                        </div>
+                        <div class="tabContent" id="changepass" style="display: none;">
+                            Change Password Here!
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <footer>
+        2024 &copy; All Rights Reserved.
+    </footer>
+</html>

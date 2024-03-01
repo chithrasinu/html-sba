@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Per Scholas :: Test Portal - Login</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <script type="text/javascript" src="../scripts/login.js"></script>
+        <style>
+            .login-canvas {
+                border: 1px lightgrey solid;
+                border-radius: 5px;
+                width: 500px;
+                min-height: 200px;
+                margin: auto;
+                display: flexbox;
+            }
+            .login-canvas table {
+                margin-top: 20px;
+                width: 100%;
+            }
+            .input-field a {
+                margin-top: 5px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="canvas">
+            <div class="logo-container">
+                <img alt="logo" src="https://perscholas.org/wp-content/themes/per-scholas/assets/images/logo1.svg" />
+            </div>
+            <div class="login-canvas">
+                <form name="loginForm" onsubmit="return valdateLogin();">
+                    <div class="input-field">
+                        <label for="login_name">Login Name*</label>
+                        <input id="login_name" type="text" maxlength="30" name="login_name" placeholder="Login Name" width="100%" required />
+                    </div>
+                    <div class="input-field">
+                        <label for="login_pwd">Password*</label>
+                        <input id="login_pwd" type="password" maxlength="30" name="login_pwd" placeholder="Password" width="100%" required />
+                    </div>
+                    <div class="input-field" style="text-align: right;">                        
+                        <input type="submit">
+                        <a href="register.html">New user? Register Here!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <footer>
+        2024 &copy; All Rights Reserved.
+    </footer>
+</html>
